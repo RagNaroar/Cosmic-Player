@@ -1,9 +1,6 @@
-﻿namespace CosmicPlayer;
+namespace CosmicPlayer;
 
 public partial class AppShell : Shell
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public AppShell() => InitializeComponent();
 }
