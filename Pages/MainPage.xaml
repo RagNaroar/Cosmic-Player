@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CosmicPlayer.Pages.MainPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             Title="Cosmic Player">
+
+             <Grid Padding="24"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <VerticalStackLayout
+                    Spacing="24"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+
+                    <Border
+                        WidthRequest="340"
+                        HeightRequest="340"
+                        Stroke="{DynamicResource BorderColor}"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 20"
+                        BackgroundColor="{DynamicResource BorderBackgroundColor}">
+
+                        <Grid>
+                            <toolkit:MediaElement
+                                x:Name="PlayerMedia"
+                                Aspect="AspectFit"
+                                HorizontalOptions="Fill"
+                                VerticalOptions="Fill"/>
+
+                                <Label
+                                    Text="😍"
+                                    FontSize="42"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    InputTransparent="True"/>
+                        </Grid>
+                    </Border> 
+                    <VerticalStackLayout
+                        Spacing="6"
+                        WidthRequest="340"
+                        HorizontalOptions="Center"
+                        >
+                        <Slider
+                            x:Name="VolumeSlider"
+                            Minimum="0"
+                            Maximum="100"
+                            Value="0"
+                            MinimumTrackColor="#60cdff"
+                            MaximumTrackColor="#2a2a34"
+                            ThumbColor="#ffffff"/>
+                            <Grid
+                                ColumnDefinitions="*,*"
+                                >
+                                <Label
+                                    Grid.Column="0"
+                                    Text="00:00"
+                                    TextColor="{DynamicResource TextColor}"
+                                    FontSize="12"
+                                    HorizontalOptions="Start"/>
+                                    <Label
+                                        Grid.Column="1"
+                                        Text="03:00"
+                                        TextColor="{DynamicResource TextColor}"
+                                        FontSize="12"
+                                        HorizontalOptions="End"/>
+                            </Grid>
+                    </VerticalStackLayout>
+                    <HorizontalStackLayout
+                        Spacing="20"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                        <Button
+                            Text="⏮"
+                            FontSize="22"
+                            TextColor="#ffffff"
+                            BackgroundColor="#2a2a34"
+                            CornerRadius="24"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            Padding="0"/>
+                        <Button
+                            x:Name="PlayPauseBtn"
+                            Clicked="PlayPauseBtnClicked"
+                            Text="▶"
+                            FontSize="22"
+                            TextColor="#ffffff"
+                            BackgroundColor="#2a2a34"
+                            CornerRadius="32"
+                            WidthRequest="64"
+                            HeightRequest="64"
+                            Padding="0"/>
+                        <Button
+                            Text="⏭"
+                            FontSize="22"
+                            TextColor="#ffffff"
+                            BackgroundColor="#2a2a34"
+                            CornerRadius="24"
+                            WidthRequest="50"
+                            HeightRequest="50"
+                            Padding="0"/>
+                    </HorizontalStackLayout>             
+                </VerticalStackLayout>
+             </Grid>
+</ContentPage>

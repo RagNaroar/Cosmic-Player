@@ -1,4 +1,4 @@
-namespace CosmicPlayer;
+﻿namespace CosmicPlayer;
 
 public partial class App : Application
 {
